@@ -1,0 +1,12 @@
+{
+    "name": "vanilla-js",
+    "version": "1.0.0",
+    "description": "Vanilla JS list app with modal and undo",
+    "scripts": {
+      "start": "serve -l 5173 ."
+    },
+    "devDependencies": {
+      "serve": "^14.2.0"
+    }
+}
+  

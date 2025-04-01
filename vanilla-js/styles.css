@@ -160,13 +160,14 @@ button:hover {
 }
 
 .modal-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 0;
     background: rgba(0, 0, 0, 0.2);
-    display: block;
+    transition: height 0.4s ease, opacity 0.4s ease;
     z-index: 1000;
 }
   
@@ -177,6 +178,19 @@ button:hover {
     box-shadow: 0 5px 20px var(--shadow);
     width: 600px;
     margin: var(--container-spacing) auto 0 auto;
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-overlay.show {
+    height: 100vh;
+    opacity: 1;
+}
+
+.modal-overlay.show .modal {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .modal h2 {
