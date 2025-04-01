@@ -1,0 +1,36 @@
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 5px 20px var(--shadow);
+    padding: var(--container-spacing);
+    text-align: center;
+}
+
+.cardHeading {
+    margin-top: 0;
+    margin-bottom: var(--spacing-m);
+    color: var(--text-main);
+    font-size: var(--font-size-xxl);
+    line-height: 44px;
+    font-weight: 500;
+}
+
+.cardDescription {
+    color: var(--text-main);
+    font-size: var(--font-size-l);
+    line-height: 26px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.cardListButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-m);
+}
+
+.buttonsBlock {
+    display: flex;
+    gap: 1rem;
+}

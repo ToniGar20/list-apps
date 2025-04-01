@@ -1,0 +1,10 @@
+.itemList {
+    list-style: none;
+    padding: var(--spacing-s);
+    margin: 0 auto var(--spacing-xl) auto;
+    min-height: 201px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    text-align: left;
+}

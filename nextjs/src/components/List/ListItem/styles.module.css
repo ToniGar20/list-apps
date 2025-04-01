@@ -1,0 +1,13 @@
+.item {
+    color: var(--text-main);
+    padding: var(--spacing-xs) var(--spacing-m);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: var(--font-size-l);
+    line-height: 26px;
+}
+
+.selected {
+    background-color: var(--selected-bg);
+    color: var(--selected-text);
+}

@@ -1,0 +1,72 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: height 0.4s ease, opacity 0.4s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.overlay.show {
+    height: 100vh;
+    opacity: 1;
+  }
+
+.modal {
+    background: var(--card-bg);
+    padding: var(--container-spacing);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 5px 20px var(--shadow);
+    width: 600px;
+    margin: var(--container-spacing) auto 0 auto;
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modalHeading {
+    display: flex;
+    font-size: var(--font-size-l);
+    margin-top: 0;
+    margin-bottom: var(--spacing-l);
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.modalInput {
+    width: 100%;
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    color: var(--text-main);
+    height: 60px;
+    padding: var(--spacing-s) var(--spacing-m);
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    margin-bottom: var(--spacing-l);
+    box-sizing: border-box;
+}
+
+.modalInput:focus {
+    border: 2px solid var(--border);
+}
+
+.modalInput::placeholder {
+    color: var(--text-placeholder, #999);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif; /* Required to apply font-weight due to browser compatibility*/
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-m);
+}
