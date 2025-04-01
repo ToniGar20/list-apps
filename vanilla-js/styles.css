@@ -1,0 +1,218 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --primary: #324BFF;
+    --primary-light: #A1C4FD;
+    --primary-lighter: #C2E9FB;
+    --background: #F7F7F7;
+    --card-bg: #FFFFFF;
+    --text-main: #333333;
+    --text-secondary: #555555;
+    --text-placeholder: #999999;
+    --border: #CCCCCC;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --selected-bg: #324BFF;
+    --selected-text: #FFFFFF;
+
+    /* Font size */
+    --font-size-xxl: 40px;
+    --font-size-xl: 26px;
+    --font-size-l: 18px;
+    --font-size-m: 16px;
+
+    /* Spacing scale */
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 0.75rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.5rem;
+    --spacing-xxxl: 3rem;
+
+
+    /* Border radius */
+    --main-border-radius: 20px;
+    --rounded-border-radius: 50px;
+
+    /* Containers */
+    --container-spacing: 50px;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, var(--primary-light), var(--primary-lighter));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+  
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 5px 20px var(--shadow);
+    padding: var(--container-spacing);
+    text-align: center;
+}
+  
+.card h1 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-m);
+    color: var(--text-main);
+    font-size: var(--font-size-xxl);
+    line-height: 44px;
+    font-weight: 500;
+}
+  
+.card p {
+    color: var(--text-main);
+    font-size: var(--font-size-l);
+    line-height: 26px;
+    margin-bottom: var(--spacing-xl);
+}
+  
+.item-list {
+    list-style: none;
+    padding: var(--spacing-s);
+    margin: 0 auto var(--spacing-xl) auto;
+    min-height: 201px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    text-align: left;
+}
+  
+.item-list li {
+    color: var(--text-main);
+    padding: var(--spacing-xs) var(--spacing-m);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: var(--font-size-l);
+    line-height: 26px;
+}
+  
+.item-list li.selected {
+    background-color: var(--selected-bg);
+    color: var(--selected-text);
+}
+
+.list-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-m);
+}
+
+.list-buttons button {
+    flex-shrink: 0;
+}
+
+#undo-btn {
+    font-size: var(--font-size-xl);
+}
+
+#add-btn,
+#modal-add-btn {
+    min-width: 138px;
+    margin-left: auto;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    padding: var(--spacing-s) var(--spacing-xxl);
+    border-radius: var(--rounded-border-radius);
+    font-size: var(--font-size-m);
+    line-height: 22px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button.solid {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+button.outline {
+    background-color: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    display: block;
+    z-index: 1000;
+}
+  
+.modal {
+    background: var(--card-bg);
+    padding: var(--container-spacing);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 5px 20px var(--shadow);
+    width: 600px;
+    margin: var(--container-spacing) auto 0 auto;
+}
+
+.modal h2 {
+    font-size: var(--font-size-l);
+    margin-top: 0;
+    margin-bottom: var(--spacing-l);
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.modal input {
+    width: 100%;
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    color: var(--text-main);
+    height: 60px;
+    padding: var(--spacing-s) var(--spacing-m);
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    margin-bottom: var(--spacing-l);
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 2px solid var(--border);
+}
+
+input::placeholder {
+    color: var(--text-placeholder, #999);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif; /* Required to apply font-weight due to browser compatibility*/
+}
+
+.modal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-m);
+}
