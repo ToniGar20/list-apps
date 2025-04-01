@@ -6,6 +6,8 @@ export function saveCurrentState(itemList) {
 }
 
 export function restorePreviousState(itemList) {
+  if (previousState.length === 0) return;
+
   itemList.innerHTML = "";
   previousState.forEach(text => {
     const li = document.createElement("li");
