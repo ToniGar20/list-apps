@@ -2,6 +2,21 @@
 
 📁 **Project Structure**
 
+```
+nextjs/
+├── app/                     # Entry point (Next.js 13+)
+│   ├── page.tsx             # Server Component importing <Card />
+│   └── globals.css          # Global styles
+├── components/              # Rehusable components
+│   ├── Button
+│   ├── List
+│   |   └── ListItem
+│   ├── Modal
+│   └── Card
+├── eslint.config.mjs        # Eslint
+├── tsconfig.json            # TypeScript configuration
+├── package.json             # Project and scripts configuration
+```
 
 ▶️ **How to Run the App**
 
