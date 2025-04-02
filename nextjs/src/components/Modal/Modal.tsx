@@ -31,6 +31,8 @@ export default function Modal({ isOpen, onAdd, onCancel }: ModalProps) {
   }, [isOpen]);
 
   const handleSubmit = () => {
+    if (!inputValue) return alert("Please enter some text.");
+
     const trimmed = inputValue.trim();
     if (trimmed) {
       onAdd(trimmed);
