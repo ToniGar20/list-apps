@@ -6,6 +6,7 @@
 nextjs/
 ├── app/                     # Entry point (Next.js 13+)
 │   ├── page.tsx             # Server Component importing <Card />
+│   ├── layout.tsx           
 │   └── globals.css          # Global styles
 ├── components/              # Rehusable components
 │   ├── Button
@@ -17,6 +18,7 @@ nextjs/
 ├── tsconfig.json            # TypeScript configuration
 ├── package.json             # Project and scripts configuration
 ```
+*Custom CSS set in each module/component*
 
 ▶️ **How to Run the App**
 
